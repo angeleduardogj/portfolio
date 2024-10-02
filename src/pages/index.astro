@@ -1,16 +1,58 @@
 ---
 
+import { ProfileInfo, AboutMe,SocialLinks, Experience,TechFilters,Gallery} from '../components';
+const profile = {
+  name: "Angel Eduardo Gaxiola Javier",
+  description: "Full Stack Developer with over 3 years of experience.",
+  location: "Sonora, Mexico",
+  about: "+3 years of experience as a web and mobile developer. I am currently actively developing for a company and I have my projects.",
+};
+
+const experience = [
+	{
+		company:'didcom',
+		start_date:'',
+		final_date:'',
+		description:''
+	}
+]
+
+
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>angeleduardogj</title>
-	</head>
-	<body>
-		<h1 class="text-3xl text-blue-500">Hello world + tailwind🚀</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>angeleduardogj</title>
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+		<div class="bg-yellow-500 text-white text-center py-4">
+			<span class="font-bold">⚠️ This page is under construction. Please check back later! ⚠️</span>
+		</div>
+		<br/>		
+    	<!-- Profile Section -->
+    	<div class="mb-8">
+        <div class="flex flex-col items-center md:flex-row md:items-start">
+			<div class="text-center md:text-left md:flex-1 md:order-1">
+				<ProfileInfo {...profile} />
+				<SocialLinks/> 
+			</div>
+        </div>
+    	</div>
+    	<!-- About Me Section -->
+    	<AboutMe about={profile.about} />
+		<!-- Experience Section -->
+	   <Experience/>
+		<!-- Technologies Categories -->
+		<TechFilters/>
+	   	<!-- Image Gallery -->
+		 <Gallery/>
+
+
+    </div>
+  </body>
 </html>
